@@ -1,1 +1,200 @@
-This is a placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - USA Physical Geography</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #2b2b2b;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #1a365d;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .site-title {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 0.4rem;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #2b6cb0;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .hero {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.05rem;
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1.75rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2b6cb0;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            color: #1a365d;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin-bottom: 0.75rem;
+        }
+
+        .card blockquote {
+            background-color: #edf2f7;
+            border-left: 3px solid #2b6cb0;
+            padding: 0.75rem 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #2d3748;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background-color: #1a365d;
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="site-title">USA Physical Geography</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="maps.html">Maps & Location</a></li>
+                    <li><a href="tectonics.html">Tectonics & Volcanoes</a></li>
+                    <li><a href="weathering.html">Weathering & Erosion</a></li>
+                    <li><a href="fluvial.html">Fluvial & Oceans</a></li>
+                    <li><a href="climate.html">Climate & Biomes</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>About the Researcher & Project</h1>
+            <p class="subtitle">Personal ties, geographical insights, and spiritual reflections on Earth's creation.</p>
+        </section>
+
+        <article class="card">
+            <h2>Personal Ties to the United States</h2>
+            <p>
+               From being a resident and student living within the United States, my connection to the country is based on experience of interacting with its varied physical geography. Being a resident of the Intermountain West region, the area where I live boasts some amazing physical geography—from desert basins at high altitude to mountain ranges of alpine heights.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Physical Geography Highlight: The Great Basin</h2>
+            <p>
+                The most outstanding physical geography feature of the United States is the Great Basin, which is a huge endorheic drainage system that covers the major part of Nevada, as well as parts of Utah, California, Oregon, and Idaho. Being internally draining basin, no water that falls within the Great Basin basin flows out to the ocean.
+            </p>
+            <p>
+                Rather, it gets evaporated, seeps underground or gathers in the form of terminal lakes such as the Great Salt Lake.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Spiritual Reflection: Alma 30:44</h2>
+            <blockquote>
+                "All things denote there is a God; yea, even the earth, and all things that are upon the face of it, yea, and its motion, yea, and also all the planets which move in their regular form do witness that there is a Supreme Creator." (Alma 30:44)
+            </blockquote>
+            <p>
+The earth bears witness of a supreme Creator in its finely balanced and mathematical system of physical geography. In fact, the whole earth exists in accordance with very complex and well-defined laws of nature, from the cyclical process of continental crust formation to the water cycle of the earth.
+            </p>
+            <p>
+                In seeing how physical systems work together to maintain biological existence, one can understand that there is an order and design behind such systems and not mere chaos and randomness. The magnificence of the earth’s physical systems becomes a witness of God’s creation.            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; Earth Processes Research Project — United States of America</p>
+    </footer>
+
+</body>
+</html>
