@@ -1,27 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <meta name="referrer" content="no-referrer">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maps, Location, and Cartographers - USA Physical Geography</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #2b2b2b; background-color: #f8f9fa; }
-        header { background-color: #1a365d; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; }
-        .site-title { color: #ffffff; font-size: 1.2rem; font-weight: 700; text-decoration: none; letter-spacing: 0.5px; }
-        nav ul { display: flex; flex-wrap: wrap; list-style: none; gap: 0.4rem; }
-        nav a { color: #e2e8f0; text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; transition: background-color 0.2s ease, color 0.2s ease; }
-        nav a:hover, nav a.active { background-color: #2b6cb0; color: #ffffff; }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
-        .hero { background-color: #ffffff; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 2rem; text-align: center; }
-        .hero h1 { font-size: 2.25rem; color: #1a365d; margin-bottom: 0.5rem; }
-        .hero p { color: #4a5568; font-size: 1.05rem; }
-        .card { background-color: #ffffff; border-radius: 8px; padding: 1.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 4px solid #2b6cb0; margin-bottom: 1.5rem; }
-        .card h2 { font-size: 1.3rem; color: #1a365d; margin-bottom: 0.75rem; }
-        .card p { color: #4a5568; font-size: 0.95rem; }
-        .placeholder-box { background-color: #edf2f7; border: 2px dashed #cbd5e1; padding: 2rem; text-align: center; color: #718096; border-radius: 6px; margin-top: 1rem; }
-        footer { text-align: center; padding: 2rem 1.5rem; background-color: #1a365d; color: #cbd5e1; font-size: 0.85rem; margin-top: 3rem; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #2b2b2b;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #1a365d;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .site-title {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 0.4rem;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #2b6cb0;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .hero {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            color: #4a5568;
+            font-size: 1.05rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1.75rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2b6cb0;
+            margin-bottom: 2rem;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: #2b6cb0;
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        .card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Map Gallery Grid */
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .map-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .map-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            background-color: #edf2f7;
+        }
+
+        .map-info {
+            padding: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .map-info h4 {
+            font-size: 1.05rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .map-info p {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+        }
+
+        .map-info .meta-tag {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #2b6cb0;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            margin-top: 0.25rem;
+        }
+
+        /* Cartographer Profile */
+        .cartographer-profile {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            align-items: flex-start;
+            margin-top: 1rem;
+        }
+
+        .cartographer-img {
+            width: 220px;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 650px) {
+            .cartographer-profile {
+                flex-direction: column;
+                align-items: center;
+            }
+            .cartographer-img {
+                width: 180px;
+            }
+        }
+
+        .reference-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reference-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 2rem;
+            text-indent: -2rem;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background-color: #1a365d;
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            margin-top: 3rem;
+        }
     </style>
 </head>
 <body>
@@ -45,20 +251,110 @@
     </header>
 
     <main class="container">
+
         <section class="hero">
             <h1>Maps, Location, and Cartographers</h1>
-            <p>Geographic coordinates, spatial data, and cartographic representation of the United States.</p>
+            <p>Geographic coordinates, spatial orientation, map projections, and cartographic history of the United States.</p>
         </section>
 
+        <!-- Section 1: Required Written Questions -->
         <article class="card">
-            <h2>Location & Spatial Framework</h2>
-            <p>This section will analyze the absolute and relative location of the United States, map projections, and spatial orientation.</p>
-            <div class="placeholder-box">
-                <p><strong>[ Research & Multimedia Content Placeholder ]</strong></p>
-                <p>Maps, GIS layers, coordinate analysis, and historical cartography references will be added here during the corresponding module.
-                </p>
+            <h2>Geographic & Historical Framework</h2>
+            
+            <h3>1. Continent & General Location</h3>
+            <p>
+                    The United States is located on the <strong>North American</strong> continent. The contiguous United States is located in the central portion of the continent, neighbor to Canada to the north, the United Mexican States and the Gulf of Mexico to the south, the Atlantic Ocean to the east, and the Pacific Ocean to the west. Additionally, the nation has Alaska in the far northwestern corner of North America and the volcanic archipelago of Hawaii in the central Pacific Ocean.
+            </p>
+
+            <h3>2. Latitudinal Range</h3>
+            <p>
+                The <strong>conterminous United States</strong> spans a latitudinal range of approximately <strong>24°30' N</strong> (Ballast Key/Key West, Florida) to <strong>49°23' N</strong> (Lake of the Woods, Minnesota along the 49th parallel border). 
+            </p>
+            <p>
+                When taking all 50 states into account, the range expands significantly from south to north: starting at <strong>18°55' N</strong> at Ka Lae (South Point), Hawaii, and reaching <strong>71°23' N</strong> at Point Barrow (Utqiaġvik), Alaska, crossing from the sub-tropics into the Arctic Circle.
+            </p>
+
+            <h3>3. Historical Existence & Sovereign Eras</h3>
+            <p>
+                The United States declared its national sovereignty on <strong>July 4, 1776</strong>, with the adoption of the Declaration of Independence, and received formal international recognition under the Treaty of Paris in <strong>1783</strong>. Prior to sovereign nationhood, the territory was inhabited for millennia by diverse indigenous nations and subsequently colonized by European powers (primarily Great Britain, Spain, France, and the Netherlands) throughout the 17th and 18th centuries. The United States of America has existed continuously as a constitutional federal republic from <strong>1789 to the present</strong>.
+            </p>
+        </article>
+<!-- Section 2: Four Maps with Context and Projections -->
+        <section class="card">
+            <h2>Cartographic Perspectives: Four Key Maps</h2>
+            <p>The maps below illustrate the geographical placement, territorial expansion, physical topography, and historic exploration routes of the United States.</p>
+
+            <div class="map-grid">
+
+                <!-- Map 1: Continental Position -->
+                <div class="map-item">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/USA_orthographic.svg" alt="Orthographic Projection showing US continental position" referrerpolicy="no-referrer">
+                    <div class="map-info">
+                        <h4>1. Continental Position & Global Placement</h4>
+                            <p>This map illustrates the geographical position of the United States within the North American continent, with respect to the Atlantic and Pacific oceanic basins.
+                            </p>
+                        <span class="meta-tag">Projection: Orthographic (Azimuthal)</span>
+                    </div>
+                </div>
+
+                <!-- Map 2: Modern Physical Relief -->
+                <div class="map-item">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/US_Relief_Map.jpg" alt="USGS Shaded Relief Map of the United States" referrerpolicy="no-referrer">
+                    <div class="map-info">
+                        <h4>2. Modern Physical Relief & Topography</h4>
+                        <p>The digital elevation model by the USGS uses satellite remote sensing (including radar topography and LiDAR) to create the shaded relief that distinguishes the east Appalachians from the Great Plains and west Cordillera.</p>
+                        <span class="meta-tag">Projection: Albers Equal-Area Conic</span>
+                    </div>
+                </div>
+
+                <!-- Map 3: Boundary Changes Over Time -->
+                <div class="map-item">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/U.S._Territorial_Acquisitions.png" alt="Territorial Acquisitions of the United States Map" referrerpolicy="no-referrer">
+                    <div class="map-info">
+                        <h4>3. Territorial Acquisitions and Boundary Changes</h4>
+                        <p>This thematic map maps the growth in the boundaries of the United States over time, showing the original boundary of 1783, the Louisiana Purchase of 1803, the annexation of Texas of 1845, and the cession of Mexico of 1848.</p>
+                        <span class="meta-tag">Type: Historical Thematic Boundary Map</span>
+                    </div>
+                </div>
+
+                <!-- Map 4: Historical Exploration Routes -->
+                <div class="map-item">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lewis_and_Clark_Expedition_map.svg" alt="Lewis and Clark Expedition Trail Map" referrerpolicy="no-referrer">
+                    <div class="map-info">
+                        <h4>4. Historical Exploration & Overland Routes</h4>
+                        <p>This map shows the Lewis and Clark expedition of 1804 to 1806 along the Missouri and Columbia rivers, marking the first cartographic exploration of the American West by land.</p>
+                        <span class="meta-tag">Type: Historical Expedition & Route Chart</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Famous Cartographer -->
+        <article class="card">
+            <h2>Famous Cartographer: John Wesley Powell (1834–1902)</h2>
+            <div class="cartographer-profile">
+                <img class="cartographer-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/John_Wesley_Powell_USGS.jpg" alt="John Wesley Powell, USGS Director" referrerpolicy="no-referrer">
+                <div>
+                    <p>
+                        <strong>John Wesley Powell</strong> was an American geologist, geographer, Civil War veteran, and pioneering cartographer who shaped scientific mapmaking and land management in the United States. In 1869, Powell led the famous <em>Powell Geographic Expedition</em>, embarking on a three-month boat voyage down the Green and Colorado Rivers through the unmapped canyons of Utah and Arizona, producing the first topographic and structural survey of the Grand Canyon region.
+                    </p>
+                    <p>
+                        Serving as the second Director of the <strong>United States Geological Survey (USGS)</strong> from 1881 to 1894, Powell established the foundational system of standardized topographic quadrangle mapping across the entire United States. His visionary work, <em>Report on the Lands of the Arid Region of the United States</em> (1878), argued that western state boundaries and property maps should be drawn according to natural hydrologic drainage basins rather than arbitrary geometric grid lines, anticipating modern watershed management and spatial cartography.
+                    </p>
+                </div>
             </div>
         </article>
+        <!-- Section 4: APA Citations -->
+        <article class="card">
+            <h2>References (APA Format)</h2>
+            <ul class="reference-list">
+                <li>National Oceanic and Atmospheric Administration. (2021). <em>Geographic centers and extreme points of the United States</em>. U.S. Department of Commerce. https://www.noaa.gov/</li>
+                <li>U.S. Geological Survey. (2020). <em>The national map: Topographic mapping and data collection</em>. U.S. Department of the Interior. https://www.usgs.gov/programs/national-geospatial-program/national-map</li>
+                <li>Worster, D. (2001). <em>A river running west: The life of John Wesley Powell</em>. Oxford University Press.</li>
+            </ul>
+        </article>
+
     </main>
 
     <footer>
