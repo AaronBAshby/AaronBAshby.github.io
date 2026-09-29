@@ -5,23 +5,245 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weathering, Mass Wasting, and Erosion - USA Physical Geography</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #2b2b2b; background-color: #f8f9fa; }
-        header { background-color: #1a365d; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; }
-        .site-title { color: #ffffff; font-size: 1.2rem; font-weight: 700; text-decoration: none; letter-spacing: 0.5px; }
-        nav ul { display: flex; flex-wrap: wrap; list-style: none; gap: 0.4rem; }
-        nav a { color: #e2e8f0; text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; transition: background-color 0.2s ease, color 0.2s ease; }
-        nav a:hover, nav a.active { background-color: #2b6cb0; color: #ffffff; }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
-        .hero { background-color: #ffffff; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 2rem; text-align: center; }
-        .hero h1 { font-size: 2.25rem; color: #1a365d; margin-bottom: 0.5rem; }
-        .hero p { color: #4a5568; font-size: 1.05rem; }
-        .card { background-color: #ffffff; border-radius: 8px; padding: 1.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 4px solid #2b6cb0; margin-bottom: 1.5rem; }
-        .card h2 { font-size: 1.3rem; color: #1a365d; margin-bottom: 0.75rem; }
-        .card p { color: #4a5568; font-size: 0.95rem; }
-        .placeholder-box { background-color: #edf2f7; border: 2px dashed #cbd5e1; padding: 2rem; text-align: center; color: #718096; border-radius: 6px; margin-top: 1rem; }
-        footer { text-align: center; padding: 2rem 1.5rem; background-color: #1a365d; color: #cbd5e1; font-size: 0.85rem; margin-top: 3rem; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #2b2b2b;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #1a365d;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .site-title {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 0.4rem;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #2b6cb0;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .hero {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2.25rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            color: #4a5568;
+            font-size: 1.05rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2b6cb0;
+            margin-bottom: 2rem;
+        }
+
+        .card h2 {
+            font-size: 1.45rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: #2b6cb0;
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        .card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+            margin-bottom: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .card ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .card li {
+            margin-bottom: 0.4rem;
+        }
+
+        .figure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .figure-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .figure-box img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            background-color: #edf2f7;
+        }
+
+        .figure-caption {
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+            color: #4a5568;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            line-height: 1.5;
+        }
+
+        /* Comparison Table */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: #1a365d;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .callout {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 1rem 1.25rem;
+            border-radius: 0 6px 6px 0;
+            margin: 1rem 0;
+            font-size: 0.92rem;
+            color: #2c5282;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #000000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .reference-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reference-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 2rem;
+            text-indent: -2rem;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background-color: #1a365d;
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            margin-top: 3rem;
+        }
     </style>
 </head>
 <body>
@@ -45,19 +267,222 @@
     </header>
 
     <main class="container">
+
         <section class="hero">
             <h1>Weathering, Mass Wasting, and Erosion</h1>
-            <p>Exogenic forces reshaping the U.S. landscape through physical breakdown and rock movement.</p>
+            <p>An investigation of mechanical and chemical weathering, downslope mass movement, fluvial erosion, aeolian processes, deserts, and glacial dynamics across the United States.</p>
         </section>
 
+        <!-- Section 1: Weathering and Mass Wasting -->
         <article class="card">
-            <h2>Surface Degradation & Slope Stability</h2>
-            <p>This section will feature research on mechanical and chemical weathering processes, rockfall, landslides, and soil erosion dynamics throughout U.S. physiographic provinces.</p>
-            <div class="placeholder-box">
-                <p><strong>[ Research & Multimedia Content Placeholder ]</strong></p>
-                <p>Photographic evidence of mass wasting, weathering process models, and erosion data charts will be inserted here.</p>
+            <h2>1. Weathering and Mass Wasting</h2>
+            <p>
+                The landscapes of the United States are constantly reshaped by exogenic forces that break rock down in place (weathering) and transport it downslope under the direct influence of gravity (mass wasting).
+            </p>
+
+            <h3>Chemical & Mechanical Weathering Processes</h3>
+            <ul>
+                <li><strong>Carbonation & Karst Landscapes:</strong> Rainwater absorbs atmospheric carbon dioxide to form weak carbonic acid ($H_2CO_3$), which dissolves carbonate bedrock such as limestone ($CaCO_3$). This process has carved extensive subterranean karst networks across the eastern and central U.S., including <strong>Mammoth Cave in Kentucky</strong> (the world's longest cave system) and the sinkhole-prone karst plains of central Florida.</li>
+                <li><strong>Hydrolysis:</strong> Acidic water reacts with common silicate minerals. In the Appalachian Piedmont and Sierra Nevada batholiths, hydrolysis alters hard potassium feldspar within granite into soft kaolinite clay minerals, fundamentally destabilizing bedrock and forming thick residual saprolite soils.</li>
+                <li><strong>Mechanical Frost Wedging:</strong> In alpine zones across the Rocky Mountains, Cascades, and Sierra Nevada, liquid water penetrates rock joints, expands by roughly 9% upon freezing, and shatters cliffs into angular debris, accumulating large <strong>talus slopes (scree fields)</strong> along mountain bases.</li>
+            </ul>
+
+            <div class="figure-grid">
+                <div class="figure-box">
+                    <img src="images/oso_landslide.jpg" alt="Aerial view of the 2014 Oso Landslide disaster" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Oso%2C_Washington_landslide_in_2014.jpg/800px-Oso%2C_Washington_landslide_in_2014.jpg'">
+                    <div class="figure-caption">
+                        <strong>Figure 1:</strong> Aerial view of the 2014 Oso Landslide along the Stillaguamish River in Washington State, showcasing rapid slope liquefaction and flow mobilization.
+                    </div>
+                </div>
+                <div class="figure-box">
+                    <img src="images/mississippi_meander.jpg" alt="False color satellite image of Mississippi River meander loops" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mississippi_River_meander_false_color.jpg/800px-Mississippi_River_meander_false_color.jpg'">
+                    <div class="figure-caption">
+                        <strong>Figure 2:</strong> Satellite imagery of dynamic meander loops and oxbow cutoffs along the Lower Mississippi River floodplain, illustrating continuous lateral migration.
+                    </div>
+                </div>
+            </div>
+
+            <h3>Major Historical Event: The 2014 Oso Landslide</h3>
+            <p>
+                On <strong>March 22, 2014</strong>, near Oso, Washington, an unstable slope consisting of unconsolidated glacial till and lacustrine clay catastrophically collapsed after weeks of abnormally heavy precipitation. The failure mobilized approximately 18 million tons of saturated earth into a fast-moving, liquefied debris flow that crossed the North Fork Stillaguamish River at speeds up to 40 mph. The slide completely buried the Steelhead Haven neighborhood, destroyed 49 homes, killed <strong>43 people</strong>, and severed State Route 530, making it the deadliest single landslide disaster in United States history (Keaton et al., 2014).
+            </p>
+
+            <h3>Government Hazard Mitigation</h3>
+            <p>
+                In direct response to the Oso disaster, federal and state agencies enacted comprehensive slope stability measures:
+            </p>
+            <ul>
+                <li><strong>National Landslide Preparedness Act (2021):</strong> Congress established an integrated national program led by the U.S. Geological Survey (USGS) to identify, map, and assess landslide risks nationwide.</li>
+                <li><strong>USGS 3D Elevation Program (3DEP):</strong> Employs high-resolution airborne <strong>LiDAR</strong> scanning to penetrate dense forest canopies, revealing historical scarps, hummocky landslide deposits, and active creeping bluffs before catastrophic failure occurs.</li>
+                <li><strong>Local Land-Use Ordinances:</strong> County and municipal zoning codes now restrict building and septic installation along designated steep slope hazard areas, requiring geotechnical engineering setbacks and automated groundwater pore-pressure sensors on active slide zones.</li>
+            </ul>
+        </article>
+
+        <!-- Section 2: Water Erosion & Major Rivers -->
+        <article class="card">
+            <h2>2. Water Erosion & Major River Systems</h2>
+            <p>
+                Water is the primary agent of erosion across North America. While localized processes—such as <em>raindrop splash</em>, <em>sheet wash</em>, and <em>rill/gully formation</em>—degrade agricultural hillsides, major river systems perform massive regional geomorphic work through hydraulic action, abrasion, and sediment transport.
+            </p>
+
+            <h3>Comparative Case Studies: Mississippi vs. Colorado Rivers</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>River System</th>
+                            <th>Source & Length</th>
+                            <th>Mean Discharge</th>
+                            <th>Channel Geometry</th>
+                            <th>Delta & Outlet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mississippi River</strong></td>
+                            <td>Lake Itasca, MN<br>~2,340 miles (3,766 km)</td>
+                            <td>~593,000 ft³/s (16,800 m³/s)</td>
+                            <td>Low-gradient, highly <strong>meandering</strong> with oxbow cutoffs, natural levees, and expansive floodplains</td>
+                            <td>Bird-foot delta (Balize Delta) discharging into the Gulf of Mexico</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Colorado River</strong></td>
+                            <td>Rocky Mountain Nat'l Park, CO<br>~1,450 miles (2,330 km)</td>
+                            <td>~22,000 ft³/s (historic, now depleted)</td>
+                            <td>High-gradient, deeply <strong>incised bedrock canyons</strong> (entrenched meanders like Horseshoe Bend)</td>
+                            <td>Colorado River Delta at the Gulf of California (largely desiccated by diversions)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Socioeconomic Impacts of River Erosion</h3>
+            <p>
+                River erosion presents constant challenges to American infrastructure. Along the <strong>Lower Mississippi River</strong>, lateral channel migration relentlessly erodes outer cutbanks, undermining agricultural property, highways, and industrial ports. If unengineered, the Mississippi would naturally divert its course into the steeper Atchafalaya River basin, cutting off the industrial ports of Baton Rouge and New Orleans from global commerce. Along the <strong>Colorado River</strong>, massive bedrock incision created the Grand Canyon, but upstream reservoir retention behind Hoover and Glen Canyon dams traps over 95% of native sediments, leading to downstream sandbar starvation and ecological loss.
+            </p>
+
+            <h3>Government River Mitigation</h3>
+            <p>
+                The <strong>U.S. Army Corps of Engineers (USACE)</strong> manages riverbank erosion through extensive structural programs:
+            </p>
+            <ul>
+                <li><strong>Articulated Concrete Mattress Revetments:</strong> Large interconnected concrete slabs laid along Mississippi cutbanks to prevent river currents from undermining earthen levees.</li>
+                <li><strong>Old River Control Structure:</strong> A complex floodgate facility operated by USACE that mechanically prevents the Mississippi from avulsing into the Atchafalaya River.</li>
+                <li><strong>Riprap & Riparian Buffers:</strong> Placement of heavy basalt/granite rock armor along eroding banks, coupled with USDA-NRCS programs subsidizing planted willow and cottonwood riparian zones to bind soils naturally.</li>
+            </ul>
+        </article>
+
+        <!-- Section 3: Wind Erosion & Aeolian Mitigation -->
+        <article class="card">
+            <h2>3. Wind Erosion & Aeolian Dynamics</h2>
+            <p>
+                Wind (aeolian) erosion occurs primarily in semi-arid and arid agricultural regions where topsoil lacks dense vegetative cover and protective soil moisture.
+            </p>
+
+            <h3>The Dust Bowl Crisis</h3>
+            <p>
+                The most severe wind erosion disaster in U.S. history occurred during the <strong>1930s Dust Bowl</strong> across the Great Plains (Oklahoma, Texas, Kansas, Colorado). Severe multidecadal drought combined with aggressive deep plowing of native prairie grasses exposed dry topsoil to high plains winds. Intense dust storms ("black blizzards") stripped millions of tons of fertile topsoil, displaced hundreds of thousands of farmers, and created an acute economic and public health catastrophe during the Great Depression.
+            </p>
+
+            <h3>Federal Mitigation Strategies</h3>
+            <p>
+                In response, the federal government revolutionized agricultural soil mechanics by creating the <strong>Soil Conservation Service (SCS)</strong> in 1935, now known as the <strong>Natural Resources Conservation Service (NRCS)</strong>:
+            </p>
+            <ul>
+                <li><strong>Shelterbelts & Windbreaks:</strong> Under the Great Plains Shelterbelt project, millions of trees were planted in linear rows perpendicular to prevailing winds, lifting surface winds and reducing boundary-layer shear stress across open fields.</li>
+                <li><strong>Conservation Tillage:</strong> Promoting no-till and low-till practices that leave crop residue (stubble) anchored in fields year-round to trap fine particles and retain organic moisture.</li>
+                <li><strong>Conservation Reserve Program (CRP):</strong> Administered by the USDA, this initiative pays agricultural producers annual rental payments to retire highly erodible cropland from active production and replant permanent native perennial grasses.</li>
+            </ul>
+        </article>
+
+        <!-- Section 4: Deserts and Desertification -->
+        <article class="card">
+            <h2>4. Deserts and Desertification</h2>
+            <p>
+                Approximately 30% of the contiguous United States is arid or semi-arid, heavily influenced by rain shadows cast by the western mountain cordillera and subtropical high-pressure descending air cells.
+            </p>
+
+            <div class="figure-grid">
+                <div class="figure-box">
+                    <img src="images/great_sand_dunes.jpg" alt="Great Sand Dunes National Park Colorado" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Great_Sand_Dunes_National_Park_and_Preserve.jpg/800px-Great_Sand_Dunes_National_Park_and_Preserve.jpg'">
+                    <div class="figure-caption">
+                        <strong>Figure 3:</strong> Massive transverse sand dunes (erg landscape) backed by the Sangre de Cristo Mountains at Great Sand Dunes National Park, Colorado.
+                    </div>
+                </div>
+                <div class="figure-box">
+                    <img src="images/grinnell_glacier.jpg" alt="Grinnell Glacier in Glacier National Park Montana" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Grinnell_Glacier_from_Overlook.jpg/800px-Grinnell_Glacier_from_Overlook.jpg'">
+                    <div class="figure-caption">
+                        <strong>Figure 4:</strong> Grinnell Glacier and its milky proglacial lake in Glacier National Park, Montana, exhibiting pronounced 21st-century terminus retreat.
+                    </div>
+                </div>
+            </div>
+
+            <h3>The Four Major North American Deserts</h3>
+            <ul>
+                <li><strong>Great Basin Desert (Cold Desert):</strong> A northern high-elevation desert located between the Sierra Nevada and Wasatch Range. Characterized by <em>hamada</em> (barren rocky mountain ranges) and wide valleys featuring <em>reg</em> (gravelly desert pavement) and playa mud flats, dominated by cold-tolerant sagebrush.</li>
+                <li><strong>Mojave Desert (Warm/Transition Desert):</strong> Spanning southern California, Nevada, and northwestern Arizona; contains Death Valley (the lowest elevation in North America at -282 ft). Displays vast <em>reg</em> alluvial fans (bajadas), rocky <em>hamada</em> massifs, and localized <em>erg</em> dunefields such as the Kelso Dunes. Characterized by the native Joshua tree (<em>Yucca brevifolia</em>).</li>
+                <li><strong>Sonoran Desert (Subtropical Desert):</strong> Located across southern Arizona and southeastern California. Known for warm winters and bimodal rainfall supporting diverse columnar cacti (Saguaro). Includes extensive sand seas (<em>erg</em>) like the Algodones/Imperial Sand Dunes alongside broad gravelly bajadas (<em>reg</em>).</li>
+                <li><strong>Chihuahuan Desert (High-Elevation Desert):</strong> Centered in New Mexico and west Texas. Dominated by limestone <em>hamada</em> plateaus, desert scrub <em>reg</em>, and unique gypsum sand seas (<em>erg</em>) preserved at <strong>White Sands National Park</strong>.</li>
+            </ul>
+
+            <div class="callout">
+                <strong>Desertification Threats:</strong> Ongoing multidecadal megadroughts in the American Southwest, coupled with severe over-allocation of the Colorado River and overpumping of fossil groundwater from the Ogallala Aquifer, are accelerating desertification. Invasive species like cheatgrass fuel repetitive wildfires that replace native biomes with barren, easily erodible dust sources, generating dangerous regional dust storms (haboobs) across Arizona and Utah.
             </div>
         </article>
+
+        <!-- Section 5: Glaciers (Ancient and Current) -->
+        <article class="card">
+            <h2>5. Glacial Dynamics: Ancient & Modern</h2>
+            <p>
+                Glaciation has exerted profound control over North American topography, sediment distribution, and freshwater reserves.
+            </p>
+
+            <h3>Ancient Pleistocene Glaciation</h3>
+            <p>
+                During the Pleistocene Epoch (culminating in the Last Glacial Maximum ~20,000 years ago), the massive <strong>Laurentide Ice Sheet</strong> and mountain-bound <strong>Cordilleran Ice Sheet</strong> covered roughly half of North America down to the modern Ohio and Missouri river valleys:
+            </p>
+            <ul>
+                <li><strong>The Great Lakes Basin:</strong> Deep glacial lobes gouged out ancient river valleys; as ice retreated, meltwater filled these depressions to form the largest collective freshwater body on the planet.</li>
+                <li><strong>Glacial Till & Soil Fertility:</strong> Receding glaciers dumped massive terminal and recessional moraines alongside fertile unsorted ground till, laying down the nutrient-rich geological foundation for the Midwestern agricultural Corn Belt.</li>
+                <li><strong>Kettle Lakes & Eskers:</strong> Landscapes across Minnesota, Wisconsin, and upstate New York are densely pocketed with kettle lakes formed where detached blocks of stagnant ice melted within glacial outwash plains.</li>
+            </ul>
+
+            <h3>Current Glaciers & Modern Impacts</h3>
+            <p>
+                Today, the United States contains tens of thousands of glaciers, overwhelmingly concentrated in <strong>Alaska</strong> (e.g., the Malaspina piedmont glacier, Hubbard tidewater glacier, and Columbia glacier), with several hundred alpine glaciers persisting in Washington's Cascade Range, Wyoming's Wind River Range, Montana's Glacier National Park, and the Colorado Rockies.
+            </p>
+            <ul>
+                <li><strong>Hydrologic Buffering:</strong> Alpine glaciers act as natural frozen reservoirs, slowly releasing cold meltwater during dry late-summer months to maintain municipal supplies and sustain salmon spawning rivers.</li>
+                <li><strong>Rapid Glacial Retreat:</strong> Rising mean global temperatures have triggered unprecedented glacial shrinkage. In Glacier National Park, Montana, the number of named glaciers larger than 25 acres has plummeted from roughly 150 in 1850 to fewer than 25 today (USGS, 2023). Rapid retreat destabilizes steep fjord slopes, causing catastrophic rockslides and generating local displacement tsunamis in Alaskan waterways.</li>
+            </ul>
+
+            <h3>Educational Video: USGS Landslide Science & Hazards</h3>
+            <p>
+                The following educational documentary from the <strong>U.S. Geological Survey</strong> outlines the primary triggers of mass wasting events nationwide, including rainfall saturation, soil mechanics, and federal monitoring networks:
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/MVwSpGVfWVo" title="USGS Landslide Hazards Overview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p style="font-size: 0.85rem; color: #718096; text-align: center;">
+                <em>Video Source: U.S. Geological Survey — Landslide Hazards and Slope Stability Monitoring.</em>
+            </p>
+        </article>
+
+        <!-- Section 6: References & AI Disclosure -->
+        <article class="card">
+            <h2>References (APA Format)</h2>
+            <ul class="reference-list">
+                <li>Google. (2024). <em>Gemini</em> (Large language model). https://gemini.google.com/ [AI disclosure: Utilized to outline geomorphic themes, format responsive HTML/CSS markup, and structure APA bibliographies; all geophysical metrics verified against USGS and NRCS research].</li>
+                <li>Keaton, J. R., Wartman, J., Anderson, S., Benoit, J., deLaChapelle, J., Gilbert, R., & Montgomery, D. R. (2014). <em>The 22 March 2014 Oso landslide, Snohomish County, Washington</em> (Geotechnical Extreme Events Reconnaissance Report GEER-036). National Science Foundation. https://doi.org/10.18118/G6H018</li>
+                <li>Natural Resources Conservation Service. (2020). <em>Soil health and wind erosion mitigation on agricultural lands</em>. U.S. Department of Agriculture. https://www.nrcs.usda.gov/</li>
+                <li>Tarbuck, E. J., Lutgens, F. K., & Tasa, D. G. (2020). <em>Earth: An introduction to physical geology</em> (13th ed.). Pearson.</li>
+                <li>U.S. Army Corps of Engineers. (2021). <em>Mississippi River and tributaries project: Channel improvement and revetment operations</em>. Mississippi Valley Division. https://www.mvd.usace.army.mil/</li>
+                <li>U.S. Geological Survey. (2020). <em>The 3D Elevation Program (3DEP): High-resolution lidar mapping for landslide hazard identification</em>. U.S. Department of the Interior. https://www.usgs.gov/3dep</li>
+                <li>U.S. Geological Survey. (2023). <em>Glacier retreat in Glacier National Park, Montana</em>. Northern Rocky Mountain Science Center. https://www.usgs.gov/centers/norock/science/retreat-glaciers-glacier-national-park</li>
+            </ul>
+        </article>
+
     </main>
 
     <footer>
