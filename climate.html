@@ -3,25 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Controls, Biomes, and Climate Change - USA Physical Geography</title>
+    <title>Atmosphere, Severe Weather, and Climate - USA Physical Geography</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #2b2b2b; background-color: #f8f9fa; }
-        header { background-color: #1a365d; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; }
-        .site-title { color: #ffffff; font-size: 1.2rem; font-weight: 700; text-decoration: none; letter-spacing: 0.5px; }
-        nav ul { display: flex; flex-wrap: wrap; list-style: none; gap: 0.4rem; }
-        nav a { color: #e2e8f0; text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; transition: background-color 0.2s ease, color 0.2s ease; }
-        nav a:hover, nav a.active { background-color: #2b6cb0; color: #ffffff; }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
-        .hero { background-color: #ffffff; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 2rem; text-align: center; }
-        .hero h1 { font-size: 2.25rem; color: #1a365d; margin-bottom: 0.5rem; }
-        .hero p { color: #4a5568; font-size: 1.05rem; }
-        .card { background-color: #ffffff; border-radius: 8px; padding: 1.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 4px solid #2b6cb0; margin-bottom: 1.5rem; }
-        .card h2 { font-size: 1.3rem; color: #1a365d; margin-bottom: 0.75rem; }
-        .card p { color: #4a5568; font-size: 0.95rem; }
-        .placeholder-box { background-color: #edf2f7; border: 2px dashed #cbd5e1; padding: 2rem; text-align: center; color: #718096; border-radius: 6px; margin-top: 1rem; }
-        footer { text-align: center; padding: 2rem 1.5rem; background-color: #1a365d; color: #cbd5e1; font-size: 0.85rem; margin-top: 3rem; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #2b2b2b;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #1a365d;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .site-title {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 0.4rem;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #2b6cb0;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .hero {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2.25rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            color: #4a5568;
+            font-size: 1.05rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2b6cb0;
+            margin-bottom: 2rem;
+        }
+
+        .card h2 {
+            font-size: 1.45rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: #2b6cb0;
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        .card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+            margin-bottom: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .card ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .card li {
+            margin-bottom: 0.4rem;
+        }
+
+        .figure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .figure-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .figure-box img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            background-color: #edf2f7;
+        }
+
+        .figure-caption {
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+            color: #4a5568;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            line-height: 1.5;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: #1a365d;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .callout {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 1rem 1.25rem;
+            border-radius: 0 6px 6px 0;
+            margin: 1rem 0;
+            font-size: 0.92rem;
+            color: #2c5282;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #000000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .reference-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reference-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 2rem;
+            text-indent: -2rem;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background-color: #1a365d;
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            margin-top: 3rem;
+        }
     </style>
 </head>
 <body>
@@ -45,19 +266,225 @@
     </header>
 
     <main class="container">
+
         <section class="hero">
-            <h1>Climate Controls, Biomes, and Climate Change</h1>
-            <p>Köppen climate classifications, ecological biomes, and climatic trends across the U.S.</p>
+            <h1>Atmosphere, Severe Weather, and Climate</h1>
+            <p>An investigation of global atmospheric circulation, synoptic storm systems, Köppen climate regions, terrestrial biomes, and native biogeography across the United States.</p>
         </section>
 
+        <!-- Section 1: Global Position & Weather Systems -->
         <article class="card">
-            <h2>Atmospheric & Ecosystem Dynamics</h2>
-            <p>This section will present analysis on U.S. climate regions, biome distribution (temperate forest, grassland, desert, tundra), atmospheric controls, and regional climate change impacts.</p>
-            <div class="placeholder-box">
-                <p><strong>[ Research & Multimedia Content Placeholder ]</strong></p>
-                <p>Climographs, biome distribution maps, and climate trend datasets will be populated here.</p>
+            <h2>1. Global Position & Weather Patterns</h2>
+            <p>
+                The United States occupies a vast latitudinal expanse from approximately 24°N in Florida to 71°N in Arctic Alaska, with tropical island territories extending down to 19°N in Hawaii. This broad geographic span places the nation directly across three primary planetary atmospheric cells: the <strong>Hadley Cell</strong>, the <strong>Ferrel Cell</strong>, and the <strong>Polar Cell</strong>.
+            </p>
+
+            <h3>Circulation Cells, Wind Belts & Jet Streams</h3>
+            <ul>
+                <li><strong>The Ferrel Cell & Prevailing Westerlies:</strong> The contiguous United States lies primarily within the mid-latitude Ferrel Cell (30°N–60°N). Surface winds blow predominantly from the west toward the east, steering mid-latitude extratropical cyclones, migrating anticyclones, and frontal boundaries across the continent.</li>
+                <li><strong>Hadley Cell & Subtropical Ridge:</strong> The descending limb of the Hadley Cell produces the persistent Subtropical High-Pressure belt near 30°N latitude. This descending, dynamically compressed air suppresses cloud development, creating the hyper-arid deserts of the American Southwest and steering the easterly <em>Northeast Trade Winds</em> that govern Hawaii and the Caribbean.</li>
+                <li><strong>The Polar Front & Polar Jet Stream:</strong> At the convergence boundary between cold polar air and warm subtropical air, steep horizontal temperature gradients create the <strong>Polar Jet Stream</strong> in the upper troposphere (30,000–39,000 ft). Fluctuations (Rossby waves) in the jet stream direct winter storm tracks, draw moisture from the Gulf of Mexico, and occasionally displace the circumpolar vortex southward, sending Arctic air deep into the southern states.</li>
+            </ul>
+
+            <div class="figure-grid">
+                <div class="figure-box">
+                    <img src="images/tornado_alley.svg" alt="Synoptic map of dryline and air mass collision producing Tornado Alley">
+                    <div class="figure-caption">
+                        <strong>Figure 1:</strong> Synoptic setup of North American tornadogenesis: collision of cold Canadian cP air, hot dry Mexican cT air, and warm moist Gulf mT air along the dryline.
+                    </div>
+                </div>
+                <div class="figure-box">
+                    <img src="images/koppen_map.png" alt="Official Köppen-Geiger climate classification map of the contiguous United States">
+                    <div class="figure-caption">
+                        <strong>Figure 2:</strong> High-resolution Köppen-Geiger climate classification map of the contiguous United States based on modern 1991–2020 climatological normals.
+                    </div>
+                </div>
+            </div>
+
+            <h3>Global Precipitation Patterns</h3>
+            <p>
+                Precipitation distribution across the United States is governed by topography and proximity to maritime moisture sources. The Pacific Coast receives heavy winter precipitation from moist marine air masses forced upward by coastal cordilleras (orographic precipitation). In contrast, intermountain basins remain arid due to rain shadows. East of the Rocky Mountains, the primary moisture pump is the low-level jet drawing warm, humid maritime tropical ($mT$) air from the Gulf of Mexico, producing a stark east-west precipitation gradient across the Great Plains.
+            </p>
+        </article>
+
+        <!-- Section 2: Severe Weather Phenomena -->
+        <article class="card">
+            <h2>2. Severe Weather Phenomena</h2>
+            <p>
+                Due to its unique continental physiography—lacking east-west mountain barriers—the United States experiences the highest frequency of violent convective storms, tornadoes, and severe atmospheric hazards of any nation on Earth.
+            </p>
+
+            <h3>Common Severe Weather Types & Historical Case Studies</h3>
+            <ul>
+                <li><strong>Tornadoes & Severe Supercells:</strong> In the Great Plains and Deep South ("Tornado Alley" and "Dixie Alley"), cold Canadian polar air ($cP$) collides violently with warm, buoyant Gulf of Mexico air ($mT$), capped by dry elevated air from the Southwest ($cT$). Strong vertical wind shear provided by the jet stream induces storm rotation. <br><em>Historical Example:</em> The <strong>2011 Super Outbreak (April 25–28, 2011)</strong> generated 360 confirmed tornadoes across the southern and eastern U.S., including multiple EF5 vortices, killing 324 people and causing over $12 billion in destruction (NOAA, 2021).</li>
+                <li><strong>Tropical Cyclones:</strong> Atlantic and Gulf hurricanes form over warm ocean waters (>26.5°C) and strike coastal margins with extreme storm surges and inland freshwater flooding (e.g., Hurricane Katrina in 2005 and Hurricane Ian in 2022).</li>
+                <li><strong>Blizzards & Polar Vortex Outbreaks:</strong> Extreme winter storms fueled by Arctic high-pressure systems. During the <strong>February 2021 North American Winter Storm (Uri)</strong>, deep polar air plunged to the Gulf of Mexico, dropping temperatures in Texas below 0°F (-18°C), causing widespread power grid failure and over 240 fatalities.</li>
+                <li><strong>Wildfires & Foehn Winds:</strong> Semi-arid western biomes experience severe wildfires driven by autumn downslope adiabatic winds (such as the <em>Santa Ana winds</em> in Southern California and <em>Diablo winds</em> in Northern California), exemplified by the record-breaking 2020 Western wildfire season that burned over 10 million acres.</li>
+            </ul>
+        </article>
+
+        <!-- Section 3: Köppen Climate Classification -->
+        <article class="card">
+            <h2>3. Köppen Climate Classification</h2>
+            <p>
+                The United States features nearly every major climate regime recognized by the Köppen-Geiger classification system, reflecting its continental scale and complex terrain.
+            </p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Köppen Category</th>
+                            <th>Code & Name</th>
+                            <th>Geographic Distribution</th>
+                            <th>Temperature & Precipitation Characteristics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Group A</strong></td>
+                            <td><em>Af / Aw</em> — Tropical Wet & Dry</td>
+                            <td>Southern tip of Florida (Everglades, Keys), Hawaiian Islands</td>
+                            <td>Year-round average monthly temperatures >18°C (64°F); abundant convective rainfall with distinct wet/dry seasons.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Group B</strong></td>
+                            <td><em>BWh / BWk</em> — Arid Desert<br><em>BSh / BSk</em> — Semi-Arid Steppe</td>
+                            <td>Southwest (Mojave, Sonoran, Chihuahuan), Great Basin, Western Great Plains</td>
+                            <td>Potential evapotranspiration exceeds annual precipitation; hot desert summers (BWh) or cold winter freezes (BWk/BSk).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Group C</strong></td>
+                            <td><em>Cfa</em> — Humid Subtropical<br><em>Csa / Csb</em> — Mediterranean<br><em>Cfb</em> — Marine West Coast</td>
+                            <td>Southeastern U.S. (Cfa); Coastal & Interior California (Csa/Csb); Pacific Northwest (Cfb)</td>
+                            <td>Cfa: Hot humid summers, mild winters with uniform rain. Csa/Csb: Dry hot summers and rainy mild winters. Cfb: Year-round mild temps and drizzle.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Group D</strong></td>
+                            <td><em>Dfa / Dfb</em> — Humid Continental<br><em>Dfc</em> — Subarctic</td>
+                            <td>Midwest, Great Lakes, New England (Dfa/Dfb); Central and Interior Alaska (Dfc)</td>
+                            <td>Severe winters with persistent snow cover; warm to hot summers; wide annual temperature range exceeding 40°C.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Group E & H</strong></td>
+                            <td><em>ET</em> — Tundra<br><em>H</em> — Highland Undifferentiated</td>
+                            <td>North Slope of Alaska, Aleutian Chain (ET); Rocky Mountains, Sierra Nevada, Cascades (H)</td>
+                            <td>Warmest month averages below 10°C (50°F); permafrost in ET; rapid vertical temperature and moisture lapse rates in Highland zones.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </article>
+
+        <!-- Section 4: Biomes and Societal Impacts -->
+        <article class="card">
+            <h2>4. Terrestrial Biomes & Societal Divisions</h2>
+            <p>
+                The ecological biomes of the United States are directly determined by temperature regimes and precipitation gradients, ranging from subtropical wetlands to arctic tundra.
+            </p>
+
+            <h3>Major Biomes of the United States</h3>
+            <ul>
+                <li><strong>Temperate Deciduous Forest:</strong> Spans the Eastern seaboard through the Ohio Valley to the Mississippi River; characterized by broadleaf hardwood canopies (oak, hickory, maple, beech) adapted to four distinct seasons.</li>
+                <li><strong>Temperate Grassland (Tallgrass, Mixed, & Shortgrass Prairie):</strong> Occupies the interior Great Plains between the Mississippi River and Rocky Mountains; dominated by deep-rooted perennial grasses and rich mollisol soils.</li>
+                <li><strong>Deserts & Xeric Shrublands:</strong> Encompasses the Southwest and Great Basin; characterized by xerophytic vegetation, succulents (Saguaro), and drought-deciduous shrubs (creosote, sagebrush).</li>
+                <li><strong>Temperate Coniferous & Coastal Rainforest:</strong> Extends from northern California through the Pacific Northwest into coastal Alaska; supports dense stands of giant conifers (Coastal Redwood, Douglas fir, Western hemlock) nourished by heavy orographic rains and summer ocean fog.</li>
+                <li><strong>Boreal Forest (Taiga) & Arctic Tundra:</strong> Covers interior and northern Alaska; dominated by black spruce, larch, dwarf birch, mosses, and underlying permafrost.</li>
+            </ul>
+
+            <div class="callout">
+                <strong>Societal Impact — Do Biomes Unite or Divide?</strong> 
+                While diverse biomes provide unmatched economic self-sufficiency—from Midwestern grain belts to Pacific timber reserves—they have historically fueled acute <strong>regional divisions</strong>. The stark environmental divide at the <strong>100th Meridian</strong> separates the humid, rain-fed agricultural East from the arid, irrigation-dependent West. This ecologic boundary generated historic conflicts over federal land ownership, grazing rights, and the over-allocation of the Colorado River Basin. Differences between urbanized eastern forest populations and western arid resource communities continue to drive political and environmental debates over resource extraction, wildfire management, and water conservation.
+            </div>
+        </article>
+
+        <!-- Section 5: Native Flora and Fauna -->
+        <article class="card">
+            <h2>5. Native Biogeography: Flora and Fauna</h2>
+            <p>
+                The North American continent supports exceptional floral and faunal biodiversity that has sustained human populations for thousands of years while presenting distinct survival hazards.
+            </p>
+
+            <div class="figure-grid">
+                <div class="figure-box">
+                    <img src="images/american_bison.jpg" alt="American bison bull grazing on natural prairie rangeland">
+                    <div class="figure-caption">
+                        <strong>Figure 3:</strong> The American bison (<em>Bison bison</em>), a keystone herbivore of North American grasslands essential to Indigenous economies and prairie ecology.
+                    </div>
+                </div>
+                <div class="figure-box">
+                    <img src="images/poison_ivy.jpg" alt="Poison ivy foliage displaying characteristic three leaflets">
+                    <div class="figure-caption">
+                        <strong>Figure 4:</strong> Eastern poison ivy (<em>Toxicodendron radicans</em>), displaying the characteristic trifoliate leaf pattern that produces toxic urushiol oil.
+                    </div>
+                </div>
+            </div>
+
+            <h3>Native Plants: Resources & Hazards</h3>
+            <ul>
+                <li><strong>Beneficial & Medicinal Flora:</strong>
+                    <ul>
+                        <li><em>Wild Rice (Zizania palustris):</em> Native aquatic grain harvested by Indigenous Great Lakes nations (Ojibwe) as an essential nutritional staple.</li>
+                        <li><em>Pacific Yew (Taxus brevifolia):</em> An understory conifer of Pacific Northwest rainforests; the source of <strong>paclitaxel (Taxol)</strong>, a revolutionary chemotherapy drug used in modern oncology.</li>
+                        <li><em>Eastern White Pine (Pinus strobus):</em> Straight, tall conifer prized for centuries as ship masts, building lumber, and vitamin C-rich needle teas used to prevent scurvy.</li>
+                        <li><em>Sugar Maple (Acer saccharum):</em> Foundational hardwood providing commercial timber and sap for natural maple syrup.</li>
+                    </ul>
+                </li>
+                <li><strong>Dangerous & Poisonous Flora:</strong>
+                    <ul>
+                        <li><em>Poison Ivy & Poison Oak (Toxicodendron spp.):</em> Widespread native vines and shrubs that secrete <strong>urushiol</strong>, an oily organic resin triggering severe contact dermatitis and allergic blisters.</li>
+                        <li><em>Spotted Water Hemlock (Cicuta maculata):</em> Found in wet meadows across North America; contains <strong>cicutoxin</strong>, a potent neurotoxin that disrupts the central nervous system and causes rapid convulsions and fatal respiratory failure upon ingestion.</li>
+                        <li><em>White Snakeroot (Ageratina altissima):</em> Contains the toxin tremetol; historically poisoned thousands of frontier settlers with "milk sickness" after they consumed milk from cows that grazed on the plant.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Native Animals: Resources & Hazards</h3>
+            <ul>
+                <li><strong>Useful & Economic Fauna:</strong>
+                    <ul>
+                        <li><em>American Bison (Bison bison):</em> Massive grazing herbivore foundational to the food, clothing, tools, and spiritual traditions of Indigenous Plains nations; today managed for commercial meat and ecological prairie restoration.</li>
+                        <li><em>North American Beaver (Castor canadensis):</em> Keystone ecosystem engineer whose waterproof pelts fueled the continental fur trade, driving European exploration and the mapping of the interior West.</li>
+                        <li><em>Pacific Salmon (Oncorhynchus spp.):</em> Anadromous fish species that formed the nutritional and commercial bedrock of Pacific Northwest and Alaskan native civilizations.</li>
+                        <li><em>White-Tailed Deer (Odocoileus virginianus):</em> Most widely distributed big-game mammal; served historically as a primary source of meat, sinew, and buckskin leather.</li>
+                    </ul>
+                </li>
+                <li><strong>Dangerous & Venomous Fauna:</strong>
+                    <ul>
+                        <li><em>Apex Predators:</em> The <strong>Grizzly Bear</strong> (<em>Ursus arctos horribilis</em>) and <strong>Cougar</strong> (<em>Puma concolor</em>), capable of inflicting fatal trauma when defending territory or offspring. In the Southeast, the <strong>American Alligator</strong> (<em>Alligator mississippiensis</em>) poses predatory threats in coastal waterways.</li>
+                        <li><em>Venomous Pit Vipers:</em> The Eastern and Western Diamondback Rattlesnakes (<em>Crotalus adamanteus</em> and <em>C. atrox</em>), which deliver complex hemotoxic and tissue-destroying venom through hinged fangs.</li>
+                        <li><em>Venomous Arthropods:</em> The Black Widow (<em>Latrodectus mactans</em>), containing neurotoxic latrotoxin, and the Brown Recluse (<em>Loxosceles reclusa</em>), whose bite can cause severe necrotic skin lesions.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Educational Video: NOAA Jet Stream Mechanics</h3>
+            <p>
+                The following educational production by the <strong>National Oceanic and Atmospheric Administration (NOAA)</strong> explains the atmospheric mechanics of the jet stream, showing how upper-level steering currents control storm development and severe weather outbreaks across North America:
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/o203JXAnSA0" title="NOAA Jet Stream Mechanics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p style="font-size: 0.85rem; color: #718096; text-align: center;">
+                <em>Video Source: National Oceanic and Atmospheric Administration (NOAA SciJinks) — What Is the Jet Stream?</em>
+            </p>
+        </article>
+
+        <!-- Section 6: References & AI Disclosure -->
+        <article class="card">
+            <h2>References (APA Format)</h2>
+            <ul class="reference-list">
+                <li>Beck, H. E., Zimmermann, N. E., McVicar, T. R., Vergopolan, N., Berg, A., & Wood, E. F. (2018). Present and future Köppen-Geiger climate classification maps at 1-km resolution. <em>Scientific Data</em>, 5, Article 180214. https://doi.org/10.1038/sdata.2018.214</li>
+                <li>Google. (2024). <em>Gemini</em> (Large language model). https://gemini.google.com/ [AI disclosure: Utilized to outline atmospheric thermodynamic concepts, format responsive HTML/CSS structures, and compile taxonomic classifications; all meteorological and ecological data verified against NOAA and USGS publications].</li>
+                <li>National Oceanic and Atmospheric Administration. (2020). <em>What is the jet stream?</em> SciJinks Educational Series. https://scijinks.gov/jet-stream/</li>
+                <li>National Oceanic and Atmospheric Administration. (2021). <em>The historic April 2011 Super Outbreak</em>. National Weather Service. https://www.weather.gov/bmx/event_04272011</li>
+                <li>Tarbuck, E. J., Lutgens, F. K., & Tasa, D. G. (2020). <em>Earth: An introduction to physical geology</em> (13th ed.). Pearson.</li>
+                <li>U.S. Department of Agriculture. (2022). <em>The PLANTS Database: National plant data team</em>. Natural Resources Conservation Service. https://plants.usda.gov/</li>
+                <li>U.S. Fish and Wildlife Service. (2023). <em>North American wildlife conservation and species directory</em>. U.S. Department of the Interior. https://www.fws.gov/</li>
+            </ul>
+        </article>
+
     </main>
 
     <footer>
