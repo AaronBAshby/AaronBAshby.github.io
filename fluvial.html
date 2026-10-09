@@ -5,23 +5,244 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fluvial Processes, Oceans, and Coastlines - USA Physical Geography</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #2b2b2b; background-color: #f8f9fa; }
-        header { background-color: #1a365d; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; }
-        .site-title { color: #ffffff; font-size: 1.2rem; font-weight: 700; text-decoration: none; letter-spacing: 0.5px; }
-        nav ul { display: flex; flex-wrap: wrap; list-style: none; gap: 0.4rem; }
-        nav a { color: #e2e8f0; text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; transition: background-color 0.2s ease, color 0.2s ease; }
-        nav a:hover, nav a.active { background-color: #2b6cb0; color: #ffffff; }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
-        .hero { background-color: #ffffff; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 2rem; text-align: center; }
-        .hero h1 { font-size: 2.25rem; color: #1a365d; margin-bottom: 0.5rem; }
-        .hero p { color: #4a5568; font-size: 1.05rem; }
-        .card { background-color: #ffffff; border-radius: 8px; padding: 1.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 4px solid #2b6cb0; margin-bottom: 1.5rem; }
-        .card h2 { font-size: 1.3rem; color: #1a365d; margin-bottom: 0.75rem; }
-        .card p { color: #4a5568; font-size: 0.95rem; }
-        .placeholder-box { background-color: #edf2f7; border: 2px dashed #cbd5e1; padding: 2rem; text-align: center; color: #718096; border-radius: 6px; margin-top: 1rem; }
-        footer { text-align: center; padding: 2rem 1.5rem; background-color: #1a365d; color: #cbd5e1; font-size: 0.85rem; margin-top: 3rem; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #2b2b2b;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #1a365d;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .site-title {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 0.4rem;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #2b6cb0;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .hero {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2.25rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            color: #4a5568;
+            font-size: 1.05rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2b6cb0;
+            margin-bottom: 2rem;
+        }
+
+        .card h2 {
+            font-size: 1.45rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: #2b6cb0;
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        .card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+            margin-bottom: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .card ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .card li {
+            margin-bottom: 0.4rem;
+        }
+
+        .figure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .figure-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .figure-box img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            background-color: #edf2f7;
+        }
+
+        .figure-caption {
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+            color: #4a5568;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            line-height: 1.5;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: #1a365d;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .callout {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 1rem 1.25rem;
+            border-radius: 0 6px 6px 0;
+            margin: 1rem 0;
+            font-size: 0.92rem;
+            color: #2c5282;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #000000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .reference-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reference-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 2rem;
+            text-indent: -2rem;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background-color: #1a365d;
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            margin-top: 3rem;
+        }
     </style>
 </head>
 <body>
@@ -45,19 +266,243 @@
     </header>
 
     <main class="container">
+
         <section class="hero">
             <h1>Fluvial Processes, Oceans, and Coastlines</h1>
-            <p>River systems, drainage basins, coastal geomorphology, and oceanographic controls.</p>
+            <p>An investigation of riverine flooding, inland waterways, ocean currents, maritime commerce, coastal morphology, and marine hazards across the United States.</p>
         </section>
 
+        <!-- Section 1: Flooding Hazards and Mitigation -->
         <article class="card">
-            <h2>Hydrologic & Coastal Geomorphology</h2>
-            <p>This section will examine major U.S. drainage systems (Mississippi-Missouri, Colorado, Columbia rivers), barrier islands, deltaic erosion, and coastal dynamics.</p>
-            <div class="placeholder-box">
-                <p><strong>[ Research & Multimedia Content Placeholder ]</strong></p>
-                <p>Hydrographs, satellite imagery of deltas and coastlines, and river discharge datasets will be added here.</p>
+            <h2>1. Flooding Dynamics & Mitigation</h2>
+            <p>
+                Flooding represents the most frequent and economically devastating natural hazard in the United States, occurring across diverse hydrologic regimes throughout the year.
+            </p>
+
+            <h3>Types and Frequency of Flooding</h3>
+            <ul>
+                <li><strong>Riverine Overbank Flooding:</strong> Concentrated across the extensive low-gradient alluvial basins of the Mississippi, Ohio, Missouri, and Red River systems. Driven by prolonged regional rainfall and seasonal spring snowmelt, these slow-onset floods inundate thousands of square miles of agricultural bottomland on a regular multi-year basis (e.g., the Great Mississippi Flood of 1927 and the 1993 Midwest Flood).</li>
+                <li><strong>Flash Floods:</strong> High-velocity, localized inundations common in mountainous terrain and the arid American Southwest. Intense convective cloudbursts drop torrential precipitation onto low-permeability desert soils, turning dry arroyos, washes, and narrow slot canyons into destructive debris-laden torrents within minutes.</li>
+                <li><strong>Coastal Storm Surge & Tidal Flooding:</strong> Driven by tropical cyclones and winter nor'easters pushing seawater onto land across the Gulf of Mexico and Atlantic seaboards, exacerbated by high astronomical "king tides" and relative sea-level rise.</li>
+            </ul>
+
+            <div class="figure-grid">
+                <div class="figure-box">
+                    <img src="images/mississippi_barge.jpg" alt="Commercial towboat pushing freight barges on the Mississippi River">
+                    <div class="figure-caption">
+                        <strong>Figure 1:</strong> Commercial tug pushing a bulk commodity barge tow along the Mississippi River inland waterway corridor.
+                    </div>
+                </div>
+                <div class="figure-box">
+                    <img src="images/barrier_island.jpg" alt="Aerial view of sandy barrier islands in the Outer Banks North Carolina">
+                    <div class="figure-caption">
+                        <strong>Figure 2:</strong> Aerial view of the Outer Banks, North Carolina, illustrating a dynamic, wave-dominated sandy barrier island system protecting shallow lagoons.
+                    </div>
+                </div>
+            </div>
+
+            <h3>Government Preparedness & Engineering Programs</h3>
+            <p>
+                Federal flood defense is coordinated through structured engineering and risk-management initiatives:
+            </p>
+            <ul>
+                <li><strong>USACE Mississippi River & Tributaries (MR&T) Project:</strong> Following the catastrophic 1927 flood, the U.S. Army Corps of Engineers built an integrated system of over 2,200 miles of armored levees, revetments, floodways, and engineered diversion structures (such as the <em>Bonnet Carré Spillway</em> and <em>Morganza Spillway</em>) designed to divert excess floodwaters harmlessly into Lake Pontchartrain and the Atchafalaya basin.</li>
+                <li><strong>FEMA National Flood Insurance Program (NFIP):</strong> Establishes regulatory floodplain management through <strong>Flood Insurance Rate Maps (FIRMs)</strong>, establishing base flood elevations (100-year flood plains) that dictate local zoning codes, foundation elevations, and mandatory flood insurance mandates.</li>
+                <li><strong>NOAA National Water Model:</strong> A high-resolution supercomputer hydrologic modeling framework that simulates streamflow continuously over 2.7 million river reaches, providing automated flood forecasting and early warnings.</li>
+            </ul>
+        </article>
+
+        <!-- Section 2: Land and River Trade Routes -->
+        <article class="card">
+            <h2>2. Land and River Trade Routes</h2>
+            <p>
+                The economic development and industrial dominance of the United States are directly linked to its natural physiographic transportation networks, which leverage flat sedimentary valleys and navigable river basins.
+            </p>
+
+            <h3>Major Transportation Corridors & Geological Influences</h3>
+            <ul>
+                <li><strong>The Mississippi River Navigation System:</strong> Comprising over 12,000 miles of commercially navigable inland waterways including the Ohio, Missouri, Illinois, and Arkansas rivers. Flat alluvial gradients allow barge tows to transport bulk agrarian and energy commodities seamlessly from the Midwest heartland to deepwater ocean ports on the Gulf Coast.</li>
+                <li><strong>The Great Lakes–St. Lawrence Seaway:</strong> A joint American-Canadian freshwater marine corridor connecting the industrial Midwest directly to the North Atlantic through glacial lake basins and an engineered system of 15 locks.</li>
+                <li><strong>Transcontinental Rail & Highway Corridors:</strong> Major trunk corridors (I-80, I-10, I-40, and BNSF/Union Pacific railways) exploit structural gaps in mountain ranges, traversing the low-angle Appalachian water gaps, the flat Great Plains, and natural tectonic passes (e.g., South Pass and Donner Pass) across the Rocky Mountains and Sierra Nevada.</li>
+            </ul>
+
+            <h3>Trade Route Trade-Offs</h3>
+            <p>
+                <strong>Advantages:</strong> Barge shipping is remarkably cost- and fuel-efficient; a single 15-barge tow moves the equivalent cargo volume of roughly 1,050 semi-trucks with a fraction of the carbon emissions. 
+                <br>
+                <strong>Disadvantages:</strong> Fluvial transport is constrained by geologic and climatic realities. Barges move slowly, northern waterways (Upper Mississippi and Great Lakes) freeze solid during winter, and summer droughts drop river stages, requiring emergency dredging by USACE to prevent commercial groundings.
+            </p>
+
+            <h3>International Trading Partners</h3>
+            <p>
+                The United States is the world's largest goods trading nation, operating a globally integrated commerce model. According to the U.S. Census Bureau and International Trade Administration (2023), the nation's primary bilateral trade partnerships are summarized below:
+            </p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Trading Partner</th>
+                            <th>U.S. Exports (USD Billions)</th>
+                            <th>U.S. Imports (USD Billions)</th>
+                            <th>Primary Commodities Exchanged</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mexico</strong></td>
+                            <td>$323.2</td>
+                            <td>$475.6</td>
+                            <td>Automotive parts, electronics, refined petroleum, agricultural grain</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Canada</strong></td>
+                            <td>$352.8</td>
+                            <td>$421.1</td>
+                            <td>Crude oil, motor vehicles, machinery, aerospace, timber</td>
+                        </tr>
+                        <tr>
+                            <td><strong>China</strong></td>
+                            <td>$147.8</td>
+                            <td>$427.2</td>
+                            <td>Consumer electronics, machinery, semiconductors, soybeans, medical equipment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Germany</strong></td>
+                            <td>$76.7</td>
+                            <td>$159.7</td>
+                            <td>Pharmaceuticals, precision instruments, motor vehicles, industrial chemicals</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Japan</strong></td>
+                            <td>$76.2</td>
+                            <td>$147.3</td>
+                            <td>Aerospace equipment, liquefied natural gas (LNG), automobiles, optics</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </article>
+
+        <!-- Section 3: Oceans, Ocean Currents, and Islands -->
+        <article class="card">
+            <h2>3. Oceans, Currents & Island Systems</h2>
+            <p>
+                Bordered by the Atlantic Ocean to the east, the Pacific Ocean to the west, the Arctic Ocean to the north, and the Gulf of Mexico to the south, the United States is deeply influenced by marine boundary systems.
+            </p>
+
+            <div class="figure-grid">
+                <div class="figure-box">
+                    <img src="images/gulf_stream.jpg" alt="Thermal infrared map of the Gulf Stream warm ocean current">
+                    <div class="figure-caption">
+                        <strong>Figure 3:</strong> Thermal satellite map of the Gulf Stream (warm reds/oranges) flowing northward along the southeastern Atlantic seaboard before deflecting eastward.
+                    </div>
+                </div>
+                <div class="figure-box">
+                    <img src="images/hurricane_katrina.jpg" alt="Satellite view of Hurricane Katrina at Category 5 strength over the Gulf of Mexico">
+                    <div class="figure-caption">
+                        <strong>Figure 4:</strong> Satellite imagery of Hurricane Katrina (August 2005) demonstrating massive cyclonic organization and storm-surge potential over the warm Gulf of Mexico.
+                    </div>
+                </div>
+            </div>
+
+            <h3>Major Ocean Currents & Climatic Effects</h3>
+            <ul>
+                <li><strong>The Gulf Stream (Warm Western Boundary Current):</strong> Originating in the tropical Gulf of Mexico, this swift, warm current flows up the Eastern seaboard before turning eastward as the North Atlantic Drift. It transfers massive thermal energy into the atmosphere, moderating winter temperatures along coastal New England, fueling Atlantic tropical storms, and keeping northwestern Europe abnormally mild for its latitude.</li>
+                <li><strong>The California Current (Cold Eastern Boundary Current):</strong> Moves cold, subpolar water southward along the West Coast. Wind-driven Ekman transport causes intense <strong>coastal upwelling</strong> of cold, nutrient-rich deep water. This produces cool, stable marine layer air that moderates coastal temperatures, generates persistent advection fogs (e.g., San Francisco), and suppresses summer precipitation, sustaining the Mediterranean climate of coastal California.</li>
+                <li><strong>Kuroshio Extension & Aleutian Current:</strong> Bring oceanic moisture and moderate temperatures to the Pacific Northwest and southern Alaska, driving heavy coastal orographic rainfall and sustaining temperate coastal rainforests.</li>
+            </ul>
+
+            <h3>Maritime Trade Lanes & Island Geography</h3>
+            <p>
+                The United States is not landlocked; its dual-ocean frontage provides direct, unrestricted commercial access to the primary shipping arteries of the global economy:
+            </p>
+            <ul>
+                <li><strong>Trans-Pacific Container Routes:</strong> Connect the major manufacturing hubs of East Asia directly to the mega-ports of Los Angeles, Long Beach, and Seattle/Tacoma.</li>
+                <li><strong>North Atlantic Sea Lanes:</strong> Link the Port of New York and New Jersey, Savannah, and Norfolk to Western Europe.</li>
+                <li><strong>The Panama Canal:</strong> Essential maritime choke-point allowing direct container and bulk vessel transit between U.S. East/Gulf Coast refineries and Pacific markets.</li>
+                <li><strong>Islands and Territories:</strong> The volcanic Hawaiian archipelago serves as a critical strategic defense hub (Indo-Pacific Command) and world-renowned tourism center, while Caribbean territories (Puerto Rico, U.S. Virgin Islands) and Pacific territories (Guam, Northern Mariana Islands, American Samoa) expand maritime exclusive economic zones (EEZs) and commercial fisheries.</li>
+            </ul>
+        </article>
+
+        <!-- Section 4: Coastline Morphology and Evolution -->
+        <article class="card">
+            <h2>4. Coastline Morphology & Landforms</h2>
+            <p>
+                The coastlines of the United States demonstrate a stark tectonic and geomorphic dichotomy between active and passive continental margins.
+            </p>
+
+            <h3>Atlantic & Gulf Coast: Submergent & Sandy</h3>
+            <p>
+                Located along a passive continental plate margin, the Atlantic and Gulf coasts are classified as <strong>submergent, depositional coastlines</strong> with irregular, drowned river valleys (estuaries) and a broad, gently sloping continental shelf:
+            </p>
+            <ul>
+                <li><strong>Barrier Island Chains:</strong> Features wave- and storm-built elongate sand islands—such as the Outer Banks of North Carolina, Georgia's Sea Islands, and Padre Island, Texas—that parallel the coast, sheltering coastal lagoons, estuaries, and salt marshes from open ocean wave attack.</li>
+                <li><strong>Estuarine Bays:</strong> Rising sea levels following the last glacial retreat drowned ancient river valleys, creating rich, productive estuarine ecosystems such as <strong>Chesapeake Bay</strong>, Delaware Bay, and Puget Sound.</li>
+            </ul>
+
+            <h3>Pacific Coast: Emergent & Rocky</h3>
+            <p>
+                Positioned along an active convergent and transform margin, the Pacific coast (California, Oregon, Washington) is an <strong>emergent, erosional coastline</strong>:
+            </p>
+            <ul>
+                <li><strong>Structural Relief:</strong> Dominated by steep, wave-battered cliffs, rocky headlands, sea arches, sea stacks, and stepped wave-cut <strong>marine terraces</strong> produced by recurring tectonic uplift. Sand accumulation is restricted to small, isolated pocket beaches.</li>
+                <li><strong>Alaskan Fjord Coastlines:</strong> In southeast Alaska, Pleistocene valley glaciers carved deep, steep-walled marine troughs, producing complex glaciated fjords and thousands of rocky islands (the Alexander Archipelago).</li>
+            </ul>
+
+            <div class="callout">
+                <strong>Coastal Socioeconomic Trade-offs:</strong> Protected natural deepwater harbors (New York Harbor, San Francisco Bay, Puget Sound) allow global commerce, while coastal tourism generates hundreds of billions annually. However, barrier island developments face relentless beach erosion, longshore drift sediment loss, wave overwash, saltwater intrusion into coastal aquifers, and long-term sea-level inundation.
+            </div>
+        </article>
+
+        <!-- Section 5: Hurricanes, Tsunamis, and Extreme Marine Hazards -->
+        <article class="card">
+            <h2>5. Marine Hazards: Hurricanes & Tsunamis</h2>
+            <p>
+                Due to its vast maritime boundaries, the United States is exposed to catastrophic cyclonic storms in the Atlantic and basin-wide tsunami waves across the Pacific.
+            </p>
+
+            <h3>Historical Hurricane Case Studies</h3>
+            <ul>
+                <li><strong>The 1900 Galveston Hurricane (Texas):</strong> The deadliest natural disaster in United States history. An estimated Category 4 hurricane made landfall with a 15-foot storm surge that completely overwhelmed the low-lying barrier island city, destroying over 3,600 structures and killing an estimated <strong>8,000 to 12,000 people</strong>. It prompted the construction of the famous 17-foot Galveston Seawall and a major grade-raising project.</li>
+                <li><strong>Hurricane Katrina (August 2005):</strong> A massive Category 3 hurricane at landfall that struck southeast Louisiana and Mississippi with an unprecedented <strong>28-foot storm surge</strong>. Surge waters overwhelmed the USACE flood protection network around New Orleans, causing catastrophic structural breaches in the industrial canal and 17th Street drainage canal floodwalls. Approximately 80% of the city was flooded, resulting in over 1,800 deaths and exceeding $125 billion in economic losses.</li>
+                <li><strong>Hurricane Ian (September 2022):</strong> A high-end Category 4 storm that pushed a 12-to-15-foot storm surge across barrier islands in southwest Florida (Fort Myers Beach and Sanibel Island), demonstrating ongoing barrier island vulnerability.</li>
+            </ul>
+
+            <h3>Historical Tsunami Case Studies</h3>
+            <ul>
+                <li><strong>1964 Prince William Sound Earthquake & Tsunami (Alaska):</strong> The M9.2 megathrust rupture produced massive underwater landslides that generated regional displacement waves over 100 feet high, completely obliterating coastal towns such as Valdez and Seward. The trans-Pacific tsunami traveled south, killing 11 people in Crescent City, California.</li>
+                <li><strong>1946 Aleutian Islands Tsunami:</strong> Triggered by an M8.6 earthquake off the Aleutian Arc, sending tsunami waves across the Pacific that struck Hilo, Hawaii, without warning, killing 159 people and prompting the creation of the <strong>Pacific Tsunami Warning Center (PTWC)</strong>.</li>
+            </ul>
+
+            <h3>Educational Video: USGS Coastal Change Hazards</h3>
+            <p>
+                The following research overview by the <strong>U.S. Geological Survey (USGS)</strong> highlights how coastal scientists model extreme storm impacts, dune erosion, and barrier island vulnerability:
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/gtPC2EB3WGY" title="USGS Coastal Change Hazards" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p style="font-size: 0.85rem; color: #718096; text-align: center;">
+                <em>Video Source: U.S. Geological Survey — Coastal Change Hazards and Shoreline Vulnerability.</em>
+            </p>
+        </article>
+
+        <!-- Section 6: References & AI Disclosure -->
+        <article class="card">
+            <h2>References (APA Format)</h2>
+            <ul class="reference-list">
+                <li>Federal Emergency Management Agency. (2023). <em>National Flood Insurance Program: Flood insurance rate maps and flood hazard analysis</em>. U.S. Department of Homeland Security. https://www.fema.gov/flood-insurance</li>
+                <li>Google. (2024). <em>Gemini</em> (Large language model). https://gemini.google.com/ [AI disclosure: Utilized to outline coastal geomorphology concepts, compile U.S. Census trade metrics, format responsive HTML/CSS markup, and structure APA bibliographies; all facts verified against NOAA and USACE reports].</li>
+                <li>National Oceanic and Atmospheric Administration. (2023). <em>Ocean currents and climate regulation: The Gulf Stream and California Current systems</em>. National Ocean Service. https://oceanservice.noaa.gov/</li>
+                <li>National Oceanic and Atmospheric Administration. (2024). <em>The Saffir-Simpson Hurricane Wind Scale and storm surge inundation mechanics</em>. National Hurricane Center. https://www.nhc.noaa.gov/</li>
+                <li>Tarbuck, E. J., Lutgens, F. K., & Tasa, D. G. (2020). <em>Earth: An introduction to physical geology</em> (13th ed.). Pearson.</li>
+                <li>U.S. Army Corps of Engineers. (2022). <em>The Mississippi River and Tributaries project: Levees, floodways, and channel stability</em>. New Orleans District. https://www.mvn.usace.army.mil/</li>
+                <li>U.S. Census Bureau. (2024). <em>Top trading partners: Total U.S. trade in goods with world partners</em>. Foreign Trade Division. https://www.census.gov/foreign-trade/statistics/</li>
+                <li>U.S. Geological Survey. (2021). <em>Coastal change hazards: Understanding shoreline erosion and extreme storm impacts</em>. Woods Hole Coastal and Marine Science Center. https://www.usgs.gov/cch</li>
+            </ul>
+        </article>
+
     </main>
 
     <footer>
